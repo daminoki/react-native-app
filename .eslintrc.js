@@ -6,11 +6,7 @@ module.exports = {
     "prettier",
     "plugin:prettier/recommended",
   ],
-  plugins: [
-    "react",
-    "@typescript-eslint",
-    "prettier",
-  ],
+  plugins: ["react", "@typescript-eslint", "prettier"],
   parserOptions: {
     ecmaFeatures: {
       jsx: true,
@@ -27,7 +23,7 @@ module.exports = {
     "prettier/prettier": [
       "error",
       {
-        printWidth: 50,
+        printWidth: 80,
       },
     ],
   },
