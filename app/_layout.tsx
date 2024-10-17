@@ -1,6 +1,6 @@
 import { SplashScreen, Stack } from "expo-router";
-import { useFonts } from 'expo-font';
-import { useEffect } from 'react';
+import { useFonts } from "expo-font";
+import { useEffect } from "react";
 
 SplashScreen.preventAutoHideAsync();
 
@@ -18,15 +18,22 @@ export default function RootLayout() {
   });
 
   useEffect(() => {
-    if (error) throw error
+    if (error) throw error;
 
-    if (fontsLoaded) SplashScreen.hideAsync()
-  }, [fontsLoaded, error])
+    if (fontsLoaded) SplashScreen.hideAsync();
+  }, [fontsLoaded, error]);
 
-  if (!fontsLoaded && !error) return null
+  if (!fontsLoaded && !error) return null;
 
   return (
-    <Stack>
+    <Stack
+      screenOptions={{
+        headerStyle: {
+          backgroundColor: "#161622",
+        },
+        headerShown: false,
+      }}
+    >
       <Stack.Screen name="index"></Stack.Screen>
     </Stack>
   );
